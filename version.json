@@ -1,5 +1,8 @@
 {
  "version": "1.0.0",
- "build": 202609220411,
- "built": "2026-09-22 04:11"
+ "build": 202609220417,
+ "shell": "ffa1ebcc6dcd",
+ "built": "2026-09-22 04:17",
+ "url": "https://github.com/wrmerritt84/heroes-of-emberyn/releases/tag/b202609220417",
+ "game": "https://github.com/wrmerritt84/heroes-of-emberyn/releases/download/b202609220417/game-202609220417.zip"
 }
