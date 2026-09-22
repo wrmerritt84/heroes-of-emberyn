@@ -1,0 +1,20 @@
+/* The three pages Google requires before an app can be published, wearing the
+   game's own clothes rather than a bare white template. */
+:root { --gold:#e8b45c; --ink:#efe7d9; --dim:#a2968a; --panel:#1e1811; --line:#3b3124; }
+* { box-sizing: border-box; }
+body {
+  margin: 0; color: var(--ink); min-height: 100vh;
+  font: 17px/1.65 "Avenir Next", "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(180deg, #241a0f 0%, #17110a 40%, #0d0906 100%);
+}
+.wrap { max-width: 720px; margin: 0 auto; padding: 56px 22px 90px; }
+h1 { font-family: Cinzel, Georgia, serif; color: var(--gold); font-size: 38px; margin: 0 0 6px;
+     text-shadow: 0 0 34px rgba(255,140,26,.3); }
+h2 { font-family: Cinzel, Georgia, serif; font-size: 21px; margin: 34px 0 8px; }
+.sub { color: var(--dim); font-style: italic; margin-bottom: 30px; }
+p, li { color: #ded3c2; }
+a { color: var(--gold); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 22px 26px; margin: 22px 0; }
+.date { color: var(--dim); font-size: 14px; }
+footer { margin-top: 50px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--dim); font-size: 14px; }
+footer a { margin-right: 16px; }
