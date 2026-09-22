@@ -1,10 +1,10 @@
 {
  "version": "1.0.0",
- "build": 20260922191106,
+ "build": 20260922191530,
  "shell": "fd641cd3e5e9",
- "built": "2026-09-22 19:11",
- "url": "https://github.com/wrmerritt84/heroes-of-emberyn/releases/tag/b20260922191106",
- "game": "https://github.com/wrmerritt84/heroes-of-emberyn/releases/download/b20260922191106/game-20260922191106.zip",
- "mac": "https://github.com/wrmerritt84/heroes-of-emberyn/releases/download/b20260922191106/heroes-of-emberyn-mac.zip",
- "apk": "https://github.com/wrmerritt84/heroes-of-emberyn/releases/download/b20260922191106/heroes-of-emberyn.apk"
+ "built": "2026-09-22 19:15",
+ "url": "https://github.com/wrmerritt84/heroes-of-emberyn/releases/tag/b20260922191530",
+ "game": "https://github.com/wrmerritt84/heroes-of-emberyn/releases/download/b20260922191530/game-20260922191530.zip",
+ "mac": "https://github.com/wrmerritt84/heroes-of-emberyn/releases/download/b20260922191530/heroes-of-emberyn-mac.zip",
+ "apk": "https://github.com/wrmerritt84/heroes-of-emberyn/releases/download/b20260922191530/heroes-of-emberyn.apk"
 }
