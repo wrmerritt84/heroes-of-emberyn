@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Install Heroes of Emberyn</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  .get { display:inline-block; margin:10px 0 4px; padding:12px 22px; border-radius:12px; font-weight:600;
+         text-decoration:none; color:#fff8ea; background:linear-gradient(#c4913a,#8a5d1c); border:1px solid #f0c273; }
+  .size { color:var(--dim); font-size:13px; margin-left:10px; }
+  ol { margin:10px 0 0; padding-left:22px; }
+  li { margin:6px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Install the game</h1>
+  <div class="sub" id="built">Finding the newest version...</div>
+
+  <div class="card">
+    <h2 style="margin-top:0">On a Mac</h2>
+    <a class="get" id="mac" href="#">Download for Mac</a>
+    <ol>
+      <li>Open the downloaded file and drag <b>Heroes of Emberyn</b> into your <b>Applications</b> folder.</li>
+      <li>Double-click it. Your Mac will refuse and say Apple could not verify it. Press <b>Done</b>.
+        <b>Never press Move to Trash.</b></li>
+      <li>Open <b>System Settings &rarr; Privacy &amp; Security</b>, scroll to <b>Security</b>, and press
+        <b>Open Anyway</b> next to Heroes of Emberyn. Confirm with your fingerprint or password.</li>
+      <li>Open it again. It works from then on, and never asks again.</li>
+    </ol>
+    <div class="date" style="margin-top:10px">Your Mac is not saying the game is unsafe. It is saying nobody
+      has paid Apple to vouch for it, which is true: it was made at a kitchen table. Once per computer.</div>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">On an Android phone or tablet</h2>
+    <a class="get" id="apk" href="#">Download for Android</a>
+    <ol>
+      <li>Open this page <b>on the phone</b> and press the button.</li>
+      <li>Chrome will ask whether to allow installing apps from it. Say yes.</li>
+      <li>Open the file when it finishes.</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2 style="margin-top:0">Already have it?</h2>
+    <p style="margin:0">You do not need this page. Open the game and it tells you when there is a newer
+      version, with a button that does the whole thing for you. Your cards are in your Google Drive rather
+      than in the app, so updating never risks them.</p>
+  </div>
+
+  <footer>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </footer>
+</div>
+<script>
+  // Point at whatever the newest published release is, so this page never goes
+  // stale and nobody has to edit it when a version ships.
+  fetch('version.json?t=' + Date.now()).then(r => r.json()).then(v => {
+    const tag = (v.url || '').split('/').pop();
+    const base = 'https://github.com/wrmerritt84/heroes-of-emberyn/releases/download/' + tag + '/';
+    document.getElementById('mac').href = base + 'heroes-of-emberyn-mac.zip';
+    document.getElementById('apk').href = base + 'heroes-of-emberyn.apk';
+    document.getElementById('built').textContent = 'Newest version: ' + v.built;
+  }).catch(() => {
+    document.getElementById('built').innerHTML =
+      'Could not reach the version list. <a href="https://github.com/wrmerritt84/heroes-of-emberyn/releases/latest">Browse the releases</a> instead.';
+  });
+</script>
+</body>
+</html>
