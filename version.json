@@ -6,5 +6,7 @@
  "url": "https://github.com/wrmerritt84/heroes-of-emberyn/releases/tag/b20261128010956",
  "game": "https://github.com/wrmerritt84/heroes-of-emberyn/releases/download/b20261128010956/game-20261128010956.zip",
  "mac": "https://github.com/wrmerritt84/heroes-of-emberyn/releases/download/b20261128010956/heroes-of-emberyn-mac.zip",
- "apk": "https://github.com/wrmerritt84/heroes-of-emberyn/releases/download/b20261128010956/heroes-of-emberyn.apk"
+ "apk": "https://github.com/wrmerritt84/heroes-of-emberyn/releases/download/b20261128010956/heroes-of-emberyn.apk",
+ "macHash": "9daa6e4ced91cf70",
+ "apkHash": "00c0e65eddbbdb08"
 }
