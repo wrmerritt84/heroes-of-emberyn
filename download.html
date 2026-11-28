@@ -72,10 +72,13 @@
   // Point at whatever the newest published release is, so this page never goes
   // stale and nobody has to edit it when a version ships.
   fetch('version.json?t=' + Date.now()).then(r => r.json()).then(v => {
+    // The apps' own addresses, not "the newest release": a release that only
+    // changed the game carries no apps, and the apps stay wherever they were
+    // last uploaded (publish.sh, 2026-11-27).
     const tag = (v.url || '').split('/').pop();
     const base = 'https://github.com/wrmerritt84/heroes-of-emberyn/releases/download/' + tag + '/';
-    document.getElementById('mac').href = base + 'heroes-of-emberyn-mac.zip';
-    document.getElementById('apk').href = base + 'heroes-of-emberyn.apk';
+    document.getElementById('mac').href = v.mac || base + 'heroes-of-emberyn-mac.zip';
+    document.getElementById('apk').href = v.apk || base + 'heroes-of-emberyn.apk';
     document.getElementById('built').textContent = 'Newest version: ' + v.built;
   }).catch(() => {
     document.getElementById('built').innerHTML =
